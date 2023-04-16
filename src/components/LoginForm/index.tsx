@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
@@ -22,14 +23,16 @@ const LoginForm = () => {
     resolver: yupResolver(schema),
   });
 
-  
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
+
   const onSubmit = async (data: LoginFormInputs) => {
     try {
       const response = await axios.post<{ accessToken: string }>("http://localhost:3000/login", data);
       localStorage.setItem("auth", response.data.accessToken);
-      // window.location.href = "/home"; 
+      window.location.href = "/"; 
     } catch (error) {
       console.error(error);
+      setErrorMessage("Usuário ou senha incorretos.");
     }
   };
 
@@ -40,6 +43,7 @@ const LoginForm = () => {
   return (
     <form>
       <div>
+        {errorMessage && <div>{errorMessage}</div>}
         <label htmlFor="email">Email</label>
         <input type="email" id="email" {...register('email')} />
         {errors.email && <span>{errors.email.message}</span>}
