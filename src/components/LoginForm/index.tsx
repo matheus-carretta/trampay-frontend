@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import axios from "axios";
+import { Link } from 'react-router-dom';
 
 interface LoginFormInputs {
   email: string;
@@ -53,6 +54,7 @@ const LoginForm = () => {
         <input type="password" id="password" {...register('password')} />
         {errors.password && <span>{errors.password.message}</span>}
       </div>
+      <Link to="/forgot-password">Esqueceu sua senha?</Link>
       <button type="button" onClick={handleClick}>Entrar</button>
     </form>
   );
