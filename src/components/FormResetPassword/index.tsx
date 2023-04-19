@@ -12,7 +12,7 @@ interface ResetPasswordFormInputs {
 }
 
 const schema = yup.object().shape({
-  password: yup.string().required().min(8),
+  password: yup.string().required().min(8).matches(/((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/, 'Senha fraca. A senha deve ter pelo menos uma letra maiúscula, uma letra minúscula, um número e um caractere especial.'),
 });
 
 const FormResetPassword = () => {

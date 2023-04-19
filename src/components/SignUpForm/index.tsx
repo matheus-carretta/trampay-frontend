@@ -12,7 +12,7 @@ interface SignUpFormInputs {
 
 const schema = yup.object().shape({
   email: yup.string().email().required(),
-  password: yup.string().required(),
+  password: yup.string().required().min(8).matches(/((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/, 'Senha fraca. A senha deve ter pelo menos uma letra maiúscula, uma letra minúscula, um número e um caractere especial.'),
 });
 
 const SignUpForm = () => {
