@@ -28,7 +28,7 @@ const FormForgotPassword = () => {
   const onSubmit = async (data: ForgotPasswordFormInputs) => {
     try {
       setIsLoading(true);
-      const response = await axios.post<{ message: string }>("http://localhost:3000/send-recover-email", data);
+      const response = await axios.post<{ message: string }>(`${process.env.REACT_APP_API_URL}/send-recover-email`, data);
       setSuccessMessage(response.data.message);
     } catch (error) {
       console.error(error);

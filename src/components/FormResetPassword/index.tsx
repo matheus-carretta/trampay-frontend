@@ -30,7 +30,7 @@ const FormResetPassword = () => {
   const onSubmit = async (data: ResetPasswordFormInputs) => {
     try {
       setIsLoading(true);
-      const response = await axios.patch<{ message: string }>(`http://localhost:3000/user/reset-password/${token}`, data);
+      const response = await axios.patch<{ message: string }>(`${process.env.REACT_APP_API_URL}/user/reset-password/${token}`, data);
       setSuccessMessage(response.data.message);
     } catch (error) {
       console.error(error);

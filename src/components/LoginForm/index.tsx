@@ -28,7 +28,7 @@ const LoginForm = () => {
 
   const onSubmit = async (data: LoginFormInputs) => {
     try {
-      const response = await axios.post<{ accessToken: string }>("http://localhost:3000/login", data);
+      const response = await axios.post<{ accessToken: string }>(`${process.env.REACT_APP_API_URL}/login`, data);
       localStorage.setItem("auth", response.data.accessToken);
       window.location.href = "/send-balance"; 
     } catch (error) {

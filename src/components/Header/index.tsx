@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import logo from "../../public/images/casa.png"
+import logo from "../../public/images/casa.png";
 
 const Header = () => {
   const [authToken, setAuthToken] = useState(localStorage.getItem('auth'));
