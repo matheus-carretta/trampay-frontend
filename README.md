@@ -29,12 +29,21 @@ Você pode acessar o deploy dessa [aplicação aqui](https://trampay-frontend.on
 
 
 ---
+### Páginas da aplicação
+- "/": página de apresentação.
+- "/login": página para fazer login.
+- "/forgot-password": página para solicitar um email de alteração de senha.
+- "/signup": página de formulário para criar um usuário.
+- "/reset-password/:token": página para definir nova senha, recebendo um parâmetro de "token".
+- "/send-balance": renderiza a página para enviar um arquivo .csv apenas se o usuário estiver autenticado, caso contrário redireciona para a rota "/login".
+---
 ### Próximos passos
 
 - Desenvolver os testes unitários e de integração;
 - Melhorar alguns aspectos da UI;
 - Componentizar o site;
 - Aplicar a reutilização de código sass.
+- Adicionar confirmação de senha no signup e reset de senha.
 
 ## Agradecimento
 Gostaria de agradecer a toda a equipe da [Trampay](https://trampay.com/) pela oportunidade e desafio fornecido.
