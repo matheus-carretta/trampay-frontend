@@ -5,7 +5,6 @@ const SendBalance = () => {
   return (
     <>
       <Header />
-      <h1>Bem-vindo à página SendBalance!</h1>
       <SendFile />
     </>
   );

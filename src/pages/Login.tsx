@@ -5,7 +5,6 @@ const Login = () => {
   return (
     <div>
       <Header />
-      <h1>Login</h1>
       <FormLogin />
     </div>
   );

@@ -5,7 +5,6 @@ const ResetPassword = () => {
   return (
     <>
       <Header />
-      <h1>Bem-vindo à página ResetPassword!</h1>
       <FormResetPassword />
     </>
   );
