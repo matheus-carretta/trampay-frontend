@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import axios from "axios";
+import './SignUpForm.module.scss';
 
 interface SignUpFormInputs {
   email: string;
@@ -43,6 +44,7 @@ const SignUpForm = () => {
   return (
     <form>
       <div>
+        <h1>Formulário de Registro</h1>
         {errorMessage && <div>{errorMessage}</div>}
         <label htmlFor="email">Email</label>
         <input type="email" id="email" {...register('email')} />

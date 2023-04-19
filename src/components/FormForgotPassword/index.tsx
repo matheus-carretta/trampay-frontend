@@ -3,6 +3,8 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import axios from "axios";
+import styles from './FormForgotPassword.module.scss'
+import Loading from '../Loading';
 
 interface ForgotPasswordFormInputs {
   email: string;
@@ -45,14 +47,15 @@ const FormForgotPassword = () => {
   return (
     <form>
       <div>
+        <h1>Digite o seu email cadastrado</h1>
         {successMessage && <div>{successMessage}</div>}
         {errorMessage && <div>{errorMessage}</div>}
         <label htmlFor="email">Email</label>
         <input type="email" id="email" {...register('email')} />
         {errors.email && <span>{errors.email.message}</span>}
       </div>
-      <button type="button" onClick={handleClick} disabled={isLoading}>
-        {isLoading ? <div>Carregando...</div> : <div>Enviar</div>}
+      <button type="button" onClick={handleClick} disabled={isLoading} className={styles['send-button']}>
+        {isLoading ? <Loading /> : <div>Enviar</div>}
       </button>
     </form>
   );

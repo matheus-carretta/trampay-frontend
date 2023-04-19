@@ -3,6 +3,8 @@ import { useForm, SubmitHandler } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import axios from 'axios';
+import Loading from '../Loading';
+import './SendFile.module.scss';
 
 interface SendFileFormInputs {
   csvFile: FileList;
@@ -25,6 +27,7 @@ const SendFile: React.FC = () => {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm<SendFileFormInputs>({
     resolver: yupResolver(schema),
   });
@@ -46,8 +49,10 @@ const SendFile: React.FC = () => {
         },
       });
       setSuccessMessage(response.data.message);
+      reset();
     } catch (error: any) {
-      setErrorMessage(error.message);
+      console.log(error.message)
+      setErrorMessage('Não foi possível enviar o arquivo.');
     } finally {
       setIsLoading(false);
     }
@@ -60,7 +65,7 @@ const SendFile: React.FC = () => {
         <input type="file" id="csvFile" {...register('csvFile')} />
         {errors.csvFile && <span>{errors.csvFile.message}</span>}
       </div>
-      {isLoading && <div>Carregando...</div>}
+      {isLoading && <Loading />}
       {successMessage && <div>{successMessage}</div>}
       {errorMessage && <div>{errorMessage}</div>}
       <button type="submit">Enviar</button>

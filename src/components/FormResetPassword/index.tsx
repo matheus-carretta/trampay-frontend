@@ -4,6 +4,8 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import axios from "axios";
 import { useParams } from 'react-router-dom';
+import './FormResetPassword.module.scss'
+import Loading from '../Loading';
 
 interface ResetPasswordFormInputs {
   password: string;
@@ -54,7 +56,7 @@ const FormResetPassword = () => {
         {errors.password && <span>{errors.password.message}</span>}
       </div>
       <button type="button" onClick={handleClick} disabled={isLoading}>
-        {isLoading ? <div>Carregando...</div> : <div>Redefinir senha</div>}
+        {isLoading ? <Loading /> : <div>Redefinir senha</div>}
       </button>
     </form>
   );

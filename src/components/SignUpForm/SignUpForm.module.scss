@@ -1,0 +1,72 @@
+// form {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   padding: 20px;
+  
+//   div {
+//     display: flex;
+//     flex-direction: column;
+//     margin-bottom: 20px;
+//     width: 100%;
+//     max-width: 400px;
+
+//     h1 {
+//       font-size: 2rem;
+//       font-weight: 700;
+//       color: #22A767;
+//       margin-bottom: 1rem;
+//       text-align: center;
+//     }
+
+//     label {
+//       color: #24EA72;
+//       margin-bottom: 5px;
+//     }
+    
+//     input[type="email"],
+//     input[type="password"] {
+//       padding: 10px;
+//       border-radius: 5px;
+//       border: 2px solid #24EA72;
+//       color: #24EA72;
+//       font-size: 16px;
+//       width: 100%;
+//       margin-top: 5px;
+      
+//       &:focus {
+//         outline: none;
+//         border-color: #24EA72;
+//         box-shadow: 0 0 5px #24EA72;
+//       }
+//     }
+    
+//     span {
+//       color: red;
+//       font-size: 14px;
+//       margin-top: 5px;
+//     }
+//   }
+  
+//   a {
+//     color: #24EA72;
+//     margin-bottom: 20px;
+//     text-align: center;
+//   }
+  
+//   button {
+//     background-color: #24EA72;
+//     color: #fff;
+//     padding: 10px 20px;
+//     border-radius: 5px;
+//     border: none;
+//     font-size: 16px;
+//     cursor: pointer;
+//     transition: background-color 0.3s ease-in-out;
+    
+//     &:hover {
+//       background-color: #1AC568;
+//     }
+//   }
+// }
