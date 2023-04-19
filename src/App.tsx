@@ -4,6 +4,7 @@ import Login from "./pages/Login";
 import ForgotPassword from "./pages/ForgotPassword";
 import ResetPassword from "./pages/ResetPassword";
 import SendBalance from "./pages/SendBalance";
+import SignUp from "./pages/SignUp";
 
 // @ts-ignore
 const PrivateRoute = ({ children, redirectTo }) => {
@@ -24,6 +25,7 @@ function App() {
         />
         <Route path="/login" element={<Login />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="signup" element={<SignUp />} />
         <Route path="/reset-password/:token" element={<ResetPassword />} />
         <Route
           path="/send-balance"

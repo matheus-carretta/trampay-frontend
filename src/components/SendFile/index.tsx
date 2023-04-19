@@ -39,7 +39,7 @@ const SendFile: React.FC = () => {
     const token = localStorage.getItem('auth');
     setIsLoading(true);
     try {
-      const response = await axios.post(`${process.env.API_URL}/balance`, formData, {
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/balance`, formData, {
         headers: {
           Authorization: `Bearer ${token}`,
           'Content-Type': 'multipart/form-data',
