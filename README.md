@@ -1,46 +1,42 @@
-# Getting Started with Create React App
+# Desafio Trampay
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Boas vindas ao repositório do Desafio Técnico - Caso da empresa Trampay
 
-## Available Scripts
+A empresa **trampay** precisa de um site full-stack para o desenvolvimento de um sistema de login com criptografia, sistema de recuperação de senha e também que o usuário possa enviar um arquivo csv com dados de saldo e documentos de usuários. Esses dados devem ser registrados em um banco de dados. Para desenvolver o front-end da aplicação foram utilizadas as ferramentas **React**, **Vite**, **TypeScript**, **Axios** e **Sass**.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Deploy
+Você pode acessar o deploy dessa [aplicação aqui](https://trampay-frontend.onrender.com/).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+----
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Ferramentas necessárias para rodar a aplicação
 
-### `npm test`
+- [Visual Studio Code](https://code.visualstudio.com/download) - para melhor visualização do código
+- [Git](https://git-scm.com/downloads) - para clonar esse repositório
+- [Node.js](https://nodejs.org/en/download/) - para instalar os pacotes de dependência
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+### Passo a passo para a inicialização
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone o repositório usando o comando ` git clone https://github.com/matheus-carretta/trampay-frontend `
+2. Abra o diretório do projeto no seu editor de código
+3. Instale as dependências do projeto executando o comando `npm install`
+4. Crie um arquivo .env na raiz do projeto e configure as variáveis de ambiente necessárias (veja o arquivo .env.example para saber quais variáveis são necessárias)
+5. Inicie o servidor de desenvolvimento executando o comando `npm start`
+   - Caso apareça a mensagem de conflito de porta, aperta 'Y' no terminal
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
+### Próximos passos
 
-### `npm run eject`
+- Desenvolver os testes unitários e de integração;
+- Melhorar alguns aspectos da UI;
+- Componentizar o site;
+- Aplicar a reutilização de código sass.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Agradecimento
+Gostaria de agradecer a toda a equipe da [Trampay](https://trampay.com/) pela oportunidade e desafio fornecido.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Além disso, você também pode consultar o repositório do [back-end aqui](https://github.com/matheus-carretta/trampay-backend).
