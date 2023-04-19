@@ -4,6 +4,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import axios from "axios";
 import { Link } from 'react-router-dom';
+import './LoginForm.module.scss'
 
 interface LoginFormInputs {
   email: string;
@@ -42,8 +43,9 @@ const LoginForm = () => {
   };
 
   return (
-    <form>
+    <form className="login-form">
       <div>
+        <h1>Formulário de Login</h1>
         {errorMessage && <div>{errorMessage}</div>}
         <label htmlFor="email">Email</label>
         <input type="email" id="email" {...register('email')} />
