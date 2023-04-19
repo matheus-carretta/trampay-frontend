@@ -1,3 +1,12 @@
-routes:
-  - src: /*
-    dest: /index.html
+services:
+  - name: web
+    env:
+      - key: NODE_ENV
+        value: production
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
+    healthCheckPath: /health
+    httpPort: 8080
+    routes:
+      - src: /*
+        dest: /index.html
