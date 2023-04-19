@@ -52,7 +52,7 @@ const FormResetPassword = () => {
         {successMessage && <div>{successMessage}</div>}
         {errorMessage && <div>{errorMessage}</div>}
         <label htmlFor="password">Nova senha</label>
-        <input type="text" id="password" {...register('password')} />
+        <input type="text" id="password" {...register('password')} placeholder='Maiúsculas, minúsculas, números e caracteres especiais' />
         {errors.password && <span>{errors.password.message}</span>}
       </div>
       <button type="button" onClick={handleClick} disabled={isLoading}>

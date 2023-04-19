@@ -47,12 +47,12 @@ const SignUpForm = () => {
         <h1>Formulário de Registro</h1>
         {errorMessage && <div>{errorMessage}</div>}
         <label htmlFor="email">Email</label>
-        <input type="email" id="email" {...register('email')} />
+        <input type="email" id="email" {...register('email')} placeholder='Digite seu email' />
         {errors.email && <span>{errors.email.message}</span>}
       </div>
       <div>
         <label htmlFor="password">Senha</label>
-        <input type="password" id="password" {...register('password')} />
+        <input type="password" id="password" {...register('password')} placeholder='Maiúsculas, minúsculas, números e caracteres especiais' />
         {errors.password && <span>{errors.password.message}</span>}
       </div>
       <button type="button" onClick={handleClick}>Cadastrar</button>

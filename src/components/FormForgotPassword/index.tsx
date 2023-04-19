@@ -51,7 +51,7 @@ const FormForgotPassword = () => {
         {successMessage && <div>{successMessage}</div>}
         {errorMessage && <div>{errorMessage}</div>}
         <label htmlFor="email">Email</label>
-        <input type="email" id="email" {...register('email')} />
+        <input type="email" id="email" {...register('email')} placeholder='Digite sua senha' />
         {errors.email && <span>{errors.email.message}</span>}
       </div>
       <button type="button" onClick={handleClick} disabled={isLoading} className={styles['send-button']}>

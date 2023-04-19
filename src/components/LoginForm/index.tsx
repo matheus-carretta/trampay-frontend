@@ -48,12 +48,12 @@ const LoginForm = () => {
         <h1>Formulário de Login</h1>
         {errorMessage && <div>{errorMessage}</div>}
         <label htmlFor="email">Email</label>
-        <input type="email" id="email" {...register('email')} />
+        <input type="email" id="email" {...register('email')} placeholder='Digite seu email' />
         {errors.email && <span>{errors.email.message}</span>}
       </div>
       <div>
         <label htmlFor="password">Senha</label>
-        <input type="password" id="password" {...register('password')} />
+        <input type="password" id="password" {...register('password')} placeholder='Digite sua senha' />
         {errors.password && <span>{errors.password.message}</span>}
       </div>
       <Link to="/forgot-password">Esqueceu sua senha?</Link>
