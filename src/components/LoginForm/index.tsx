@@ -31,7 +31,7 @@ const LoginForm = () => {
     try {
       const response = await axios.post<{ accessToken: string }>(`${process.env.REACT_APP_API_URL}/login`, data);
       localStorage.setItem("auth", response.data.accessToken);
-      window.location.href = "/#/send-balance"; 
+      window.location.href = "/"; 
     } catch (error) {
       console.error(error);
       setErrorMessage("Usuário ou senha incorretos.");
