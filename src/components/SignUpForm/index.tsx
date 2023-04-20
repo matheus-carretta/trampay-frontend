@@ -4,7 +4,6 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import axios from "axios";
 import './SignUpForm.module.scss';
-import { Navigate } from 'react-router-dom';
 
 interface SignUpFormInputs {
   email: string;
@@ -31,7 +30,7 @@ const SignUpForm = () => {
     try {
       const response = await axios.post(`${process.env.REACT_APP_API_URL}/user`, data);
       localStorage.setItem("auth", response.data.accessToken);
-      return <Navigate to="/" />;  
+      window.location.href = '/#/';  
     } catch (error) {
       console.error(error);
       setErrorMessage("Erro ao realizar cadastro.");

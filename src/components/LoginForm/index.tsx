@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import axios from "axios";
-import { Link, Navigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './LoginForm.module.scss'
 
 interface LoginFormInputs {
@@ -31,7 +31,7 @@ const LoginForm = () => {
     try {
       const response = await axios.post<{ accessToken: string }>(`${process.env.REACT_APP_API_URL}/login`, data);
       localStorage.setItem("auth", response.data.accessToken);
-      return <Navigate to="/" />;  
+      window.location.href = '/#/'; 
     } catch (error) {
       console.error(error);
       setErrorMessage("Usuário ou senha incorretos.");
