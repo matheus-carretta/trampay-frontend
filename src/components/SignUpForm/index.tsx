@@ -30,7 +30,7 @@ const SignUpForm = () => {
     try {
       const response = await axios.post(`${process.env.REACT_APP_API_URL}/user`, data);
       localStorage.setItem("auth", response.data.accessToken);
-      window.location.href = "/login"; 
+      window.location.href = "/#/login"; 
     } catch (error) {
       console.error(error);
       setErrorMessage("Erro ao realizar cadastro.");
